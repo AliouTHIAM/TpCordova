@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="lib/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+  </head>
+  <body>
+    <!-- Page principale -->
+    <div data-role="page" id="main-page">
+      <div data-role="header">
+        <h1>Contact'Tel</h1>
+      </div>
+      <div data-role="main" class="ui-content">
+        <a
+          href="#add-contact-page"
+          data-role="button"
+          data-icon="arrow-r"
+          data-iconpos="right"
+          >Ajouter</a
+        >
+      </div>
+      <ul
+        id="contactList"
+        data-role="listview"
+        data-inset="true"
+        data-filter="true"
+        data-filter-placeholder="Rechercher un contact..."
+      >
+        <li>
+          <a href="#">
+            <img src="./img/avatar.jpg" alt="photo de profil du contact" />
+            <h1>Khadim Fall</h1>
+            <p>77 838 65 94</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./img/avatar.jpg" alt="photo de profil du contact" />
+            <h1>Modou Fall Fall</h1>
+            <p>77 838 65 94</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./img/avatar.jpg" alt="photo de profil du contact" />
+            <h1>Aliou THIAM</h1>
+            <p>78 493 95 14</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./img/avatar.jpg" alt="photo de profil du contact" />
+            <h1>Laye Java</h1>
+            <p>77 358 52 48</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./img/avatar.jpg" alt="photo de profil du contact" />
+            <h1>Abou BA</h1>
+            <p>77 515 89 24</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Page d'ajout de contact -->
+    <div data-role="page" id="add-contact-page">
+      <div data-role="header">
+        <h1>Ajouter un contact</h1>
+      </div>
+      <div data-role="main" class="ui-content">
+        <form id="add-contact-form">
+          <label for="contact-name">Nom</label>
+          <input
+            type="text"
+            id="contact-name"
+            name="contact-name"
+            placeholder="Nom du contact"
+            required
+          />
+          <label for="contact-phone">Téléphone</label>
+          <input
+            type="tel"
+            id="contact-phone"
+            name="contact-phone"
+            placeholder="Numéro de téléphone"
+            required
+          />
+          <button
+            type="submit"
+            data-role="button"
+            data-icon="check"
+            data-iconpos="right"
+          >
+            Ajouter
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
